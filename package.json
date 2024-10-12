@@ -1,0 +1,16 @@
+{
+  "name": "temp_server",
+  "version": "1.0.0",
+  "description": "temporary placeholder for my server coming soon(tm)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "meep",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "pm2": "^5.4.2"
+  }
+}

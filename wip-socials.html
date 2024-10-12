@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #000000, #434343);
+            font-family: 'Libre Franklin', sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+        .btn {
+            margin: 20px;
+            padding: 20px 30px;
+            font-size: 1.2em;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Contact Me</h1>
+        <div>
+            <a href="https://github.com/hawonc" target="_blank">
+                <img src="assets/github-logo.png" alt="GitHub" class="logo">
+            </a>
+            <a href="https://linkedin.com/in/joshuahcho" target="_blank">
+                <img src="linkedin-logo.png" alt="LinkedIn" class="logo">
+            </a>
+            <div class="tooltip">
+                <img src="discord-logo.jpg" alt="Discord" class="logo">
+                <span class="/assets/tooltiptext">meep07</span>
+            </div>
+            <a href="mailto:jeff@amazon.com" target="_blank">
+                <img src="/assets/email-logo.jpg" alt="Email" class="logo">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
