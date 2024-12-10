@@ -61,7 +61,7 @@ app.get('/blog/1', (req, res) => {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Blog</title>
+        <title>Joshua's Blog</title>
         <link rel="stylesheet" href="/styles.css"> <!-- Link to a custom stylesheet -->
       </head>
       <body>
@@ -69,6 +69,7 @@ app.get('/blog/1', (req, res) => {
           <h1>Joshua's Blog</h1>
         </header>
         <main>
+        <img src="/bulla.jpg" alt="Bulla">
           ${htmlContent}
         </main>
       </body>
