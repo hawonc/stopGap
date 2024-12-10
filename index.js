@@ -1,4 +1,5 @@
 const express = require('express');
+const marked = require('marked');
 const app = express();
 app.use(express.urlencoded({
   extended: true
@@ -34,6 +35,47 @@ app.get('/progress', (req, res) => {
 
 app.get('/socials', (req, res) => {
   res.sendFile(__dirname + '/templates/socials.html');
+});
+
+app.get('/blog/1', (req, res) => {
+  // Path to the Markdown file (make sure the markdown file exists)
+  const markdownFilePath = path.join(__dirname, '/blog/blog1.md');
+
+  // Read the markdown file asynchronously
+  fs.readFile(markdownFilePath, 'utf-8', (err, data) => {
+    if (err) {
+      // If there's an error reading the file, send a 500 status with an error message
+      res.status(500).send('Error reading the blog markdown file');
+      return;
+    }
+
+    // Convert the Markdown content to HTML using `marked`
+    const htmlContent = marked(data);
+
+    // Create a basic HTML structure
+    const htmlPage = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Blog</title>
+        <link rel="stylesheet" href="/styles.css"> <!-- Link to a custom stylesheet -->
+      </head>
+      <body>
+        <header>
+          <h1>Joshua's Blog</h1>
+        </header>
+        <main>
+          ${htmlContent}
+        </main>
+      </body>
+      </html>
+    `;
+
+    // Send the generated HTML as a response
+    res.send(htmlPage);
+  });
 });
 
 app.listen(3000, () => {
