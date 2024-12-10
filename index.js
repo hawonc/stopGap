@@ -62,7 +62,6 @@ app.get('/blog/1', (req, res) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Joshua's Blog</title>
-        <link rel="stylesheet" href="/styles.css"> <!-- Link to a custom stylesheet -->
       </head>
       <body>
         <header>
